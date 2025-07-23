@@ -88,22 +88,22 @@ p {
 }
 
 .flor-er { 
+  top: 25px; 
+  left: 15%; 
+  transform: translateX(-50%); 
+  
+}
+
+.flor-ty { 
   bottom: 25px; 
   rigth: 15%; 
   transform: translateX(-50%); 
   
 }
 
-.flor-ty { 
-  bottom: 35px; 
-  left: 25%; 
-  transform: translateX(-50%); 
-  
-}
-
 .flor-ui { 
-  bottom: 35px; 
-  rigth: 25%; 
+  top: 25px; 
+  rigth: 155%; 
   transform: translateX(-50%); 
   
 }
