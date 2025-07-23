@@ -63,6 +63,21 @@ p {
 .flor-bottom-der {
   bottom: 10px;
   right: 10px;
+  
+}
+
+.flor-top-centro { 
+  top: 10px;    
+  left: 50%; 
+  transform: translateX(-50%); 
+  
+}
+
+.flor-bottom-centro { 
+  bottom: 10px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  
 }
 
 /* Responsive */
