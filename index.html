@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tamizaje Cáncer Cuello Uterino</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Página 1 -->
+  <div id="pagina1" class="page active">
+    <p>En este espacio te brindamos toda la información que necesitas para hacerte el tamizaje de Cáncer de Cuello Uterino.</p>
+    <button onclick="irAPagina('pagina2')">¡Sigueme!</button>
+  </div>
+
+  <!-- Página 2 -->
+  <div id="pagina2" class="page">
+    <p>Lo primero que debes saber es que en Viva 1a puedes hacerte dos pruebas que te permitirán conocer a tiempo si tienes riesgo de cáncer de cuello uterino</p>
+    <button onclick="irAPagina('pagina3')">Si tienes entre 25 a 29 años</button>
+    <button onclick="irAPagina('pagina4')">Si eres mayor de 30 años</button>
+  </div>
+
+  <!-- Página 3 -->
+  <div id="pagina3" class="page">
+    <p>A tu edad aplica realizarte una citología cérvico uterina en el año y si todo está ok la próxima te la harás en 3 años. Con este examen se pretende identificar si hay una lesión en el cuello uterino.</p>
+    <button onclick="window.location.href='http://api.digiturno.viva1a.com.co:85/'">Agéndate aquí</button>
+  </div>
+
+  <!-- Página 4 -->
+  <div id="pagina4" class="page">
+    <p>A tu edad aplica realizarte una prueba de VPH en el año y si todo está ok la próxima te la harás en 5 años. Con este examen se pretende identificar la presencia del virus que puede llegar a producir una lesión en el cuello uterino. ¡Súper este examen! Busca el virus antes que se produzcan una lesión. ¡anímate!</p>
+    <button onclick="window.location.href='http://mesadeservicios.viva1a.com.co/glpi'">Agéndate aquí</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
