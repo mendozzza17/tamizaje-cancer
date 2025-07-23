@@ -80,34 +80,6 @@ p {
   
 }
 
-.flor-qw { 
-  bottom: 25px; 
-  left: 15%; 
-  transform: translateX(-50%); 
-  
-}
-
-.flor-er { 
-  top: 25px; 
-  left: 15%; 
-  transform: translateX(-50%); 
-  
-}
-
-.flor-ty { 
-  bottom: 25px; 
-  rigth: 15%; 
-  transform: translateX(-50%); 
-  
-}
-
-.flor-ui { 
-  top: 25px; 
-  rigth: 155%; 
-  transform: translateX(-50%); 
-  
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .decoracion {
