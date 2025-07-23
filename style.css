@@ -1,47 +1,42 @@
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: #fde1e1;
   margin: 0;
-  padding: 0;
-  background-color: #ffeaea;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .page {
   display: none;
-  text-align: center;
   padding: 60px 20px;
-  min-height: 100vh;
+  text-align: center;
   position: relative;
+  z-index: 1;
 }
 
 .page.active {
   display: block;
 }
 
-p {
-  font-size: 1.2rem;
-  color: #f0658f;
-  margin-bottom: 20px;
-  z-index: 2;
-  position: relative;
-}
-
 button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #891c59;
+  background-color: #8a2b6b;
   color: white;
+  padding: 12px 24px;
   border: none;
-  border-radius: 25px;
+  border-radius: 12px;
+  font-size: 18px;
+  margin-top: 30px;
   cursor: pointer;
-  z-index: 2;
-  position: relative;
 }
 
-button:hover {
-  background-color: #a0296c;
+p {
+  font-size: 22px;
+  color: #ef476f;
+  margin: 30px auto;
+  max-width: 700px;
 }
 
-/* Flores decorativas */
+/* Decoración de flores arriba y abajo */
 .decoracion {
   position: absolute;
   width: 80px;
@@ -50,27 +45,29 @@ button:hover {
   pointer-events: none;
 }
 
-/* Esquinas */
-.flor-top-izq    { top: 10px;   left: 15px; }
-.flor-top-der    { top: 10px;   right: 15px; }
-.flor-bottom-izq { bottom: 10px; left: 10px; }
-.flor-bottom-der { bottom: 10px; right: 10px; }
+.flor-top-izq {
+  top: 10px;
+  left: 15px;
+}
 
-/* Centros */
-.flor-top-centro    { top: 10px;    left: 50%; transform: translateX(-50%); }
-.flor-bottom-centro { bottom: 10px; left: 50%; transform: translateX(-50%); }
+.flor-top-der {
+  top: 10px;
+  right: 15px;
+}
+
+.flor-bottom-izq {
+  bottom: 10px;
+  left: 10px;
+}
+
+.flor-bottom-der {
+  bottom: 10px;
+  right: 10px;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
   .decoracion {
     width: 50px;
-  }
-}
-  p {
-    font-size: 1rem;
-  }
-
-  button {
-    font-size: 0.95rem;
   }
 }
