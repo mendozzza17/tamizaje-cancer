@@ -42,33 +42,30 @@ button:hover {
 }
 
 /* Flores decorativas */
-.flor {
+.decoracion {
   position: absolute;
-  width: 35px;
-  opacity: 0.9;
-  z-index: 1;
+  width: 80px;
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
 }
 
-/* Posiciones específicas para cada flor */
-.flor1  { top: 20px; left: 20px; }
-.flor2  { top: 20px; right: 20px; }
-.flor3  { top: 80px; left: 100px; width: 25px; }
-.flor4  { top: 80px; right: 100px; width: 25px; }
-.flor5  { top: 45%; left: 10px; width: 30px; }
-.flor6  { top: 45%; right: 10px; width: 30px; }
-.flor7  { bottom: 140px; left: 50px; width: 20px; }
-.flor8  { bottom: 140px; right: 50px; width: 20px; }
-.flor9  { bottom: 80px; left: 30%; }
-.flor10 { bottom: 80px; right: 30%; }
-.flor11 { bottom: 20px; left: 10px; }
-.flor12 { bottom: 20px; right: 10px; }
+/* Esquinas */
+.flor-top-izq    { top: 10px;   left: 15px; }
+.flor-top-der    { top: 10px;   right: 15px; }
+.flor-bottom-izq { bottom: 10px; left: 10px; }
+.flor-bottom-der { bottom: 10px; right: 10px; }
 
-/* Responsivo */
-@media (max-width: 600px) {
-  .flor {
-    width: 22px;
+/* Centros */
+.flor-top-centro    { top: 10px;    left: 50%; transform: translateX(-50%); }
+.flor-bottom-centro { bottom: 10px; left: 50%; transform: translateX(-50%); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .decoracion {
+    width: 50px;
   }
-
+}
   p {
     font-size: 1rem;
   }
