@@ -1,5 +1,5 @@
-function irAPagina(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  window.scrollTo(0, 0);
+function irAPagina(idPagina) {
+  const paginas = document.querySelectorAll('.page');
+  paginas.forEach(pagina => pagina.classList.remove('active'));
+  document.getElementById(idPagina).classList.add('active');
 }
