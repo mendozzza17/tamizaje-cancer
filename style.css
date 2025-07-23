@@ -1,88 +1,93 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #fde1e1;
   margin: 0;
-  overflow-x: hidden;
-  position: relative;
+  padding: 0;
+  background-color: #ffeaea;
 }
 
 .page {
   display: none;
-  padding: 60px 20px;
   text-align: center;
+  padding: 60px 20px;
+  min-height: 100vh;
   position: relative;
-  z-index: 1;
 }
 
 .page.active {
   display: block;
 }
 
+p {
+  font-size: 1.2rem;
+  color: #f0658f;
+  margin-bottom: 20px;
+}
+
 button {
-  background-color: #8a2b6b;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #891c59;
   color: white;
-  padding: 12px 24px;
   border: none;
-  border-radius: 12px;
-  font-size: 18px;
-  margin-top: 30px;
+  border-radius: 25px;
   cursor: pointer;
 }
 
-p {
-  font-size: 22px;
-  color: #ef476f;
-  margin: 30px auto;
-  max-width: 700px;
+button:hover {
+  background-color: #a0296c;
 }
 
-/* Decoración de flores arriba y abajo */
-.decoracion {
+/* Flores decorativas */
+.flor {
   position: absolute;
-  width: 80px;
-  opacity: 0.2;
-  z-index: 0;
-  pointer-events: none;
+  width: 40px;
+  height: 40px;
+  opacity: 0.9;
+  z-index: 1;
 }
 
-.flor-top-izq {
+.flor-top-left {
   top: 10px;
-  left: 15px;
-}
-
-.flor-top-der {
-  top: 10px;
-  right: 15px;
-}
-
-.flor-bottom-izq {
-  bottom: 10px;
   left: 10px;
 }
 
-.flor-bottom-der {
-  bottom: 10px;
+.flor-top-right {
+  top: 10px;
   right: 10px;
-  
 }
 
-.flor-top-centro { 
-  top: 10px;    
-  left: 50%; 
-  transform: translateX(-50%); 
-  
+.flor-left {
+  top: 40%;
+  left: 5px;
 }
 
-.flor-bottom-centro { 
-  bottom: 10px; 
-  left: 50%; 
-  transform: translateX(-50%); 
-  
+.flor-right {
+  top: 40%;
+  right: 5px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .decoracion {
-    width: 50px;
+.flor-bottom-left {
+  bottom: 20px;
+  left: 10px;
+}
+
+.flor-bottom-right {
+  bottom: 20px;
+  right: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .flor {
+    width: 30px;
+    height: 30px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 0.95rem;
   }
 }
