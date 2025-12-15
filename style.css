@@ -1,73 +1,131 @@
+/* Variables para Colores (Esquema Monocromático) */
+:root {
+    --black-dark: #121212;      /* Negro muy oscuro (Fondo) */
+    --white-light: #f7f7f7;     /* Blanco roto (Botones/Texto) */
+    --gray-mid: #333333;        /* Gris oscuro (Hover/Detalles) */
+    --gray-text: #cccccc;       /* Gris claro (Texto secundario) */
+    --logo-highlight: #ffffff;  /* Blanco puro (Para destacar el logo) */
+    --button-bg: var(--white-light);
+    --button-text: var(--black-dark);
+}
+
+/* Base y Tipografía */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fde1e1;
-  margin: 0;
-  overflow-x: hidden;
-  position: relative;
+    /* Fondo principal Negro */
+    background-color: var(--black-dark); 
+    color: var(--white-light); /* Texto principal Blanco */
+    font-family: 'Quicksand', sans-serif; /* Mantenemos la fuente */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
 }
 
-.page {
-  display: none;
-  padding: 60px 20px;
-  text-align: center;
-  position: relative;
-  z-index: 1;
+/* El fondo intercalado en grises (Simulación) */
+/* Usaremos una sutil sombra o un gradiente muy leve si se requiere un "intercalado" */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradiente sutil para simular el intercalado de tonos de gris */
+    background: linear-gradient(180deg, rgba(18,18,18,1) 0%, rgba(30,30,30,1) 100%); 
+    z-index: -2;
 }
 
-.page.active {
-  display: block;
+/* Contenedor Principal */
+.container {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    padding: 40px 20px;
 }
 
-button {
-  background-color: #8a2b6b;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 12px;
-  font-size: 18px;
-  margin-top: 30px;
-  cursor: pointer;
+/* LOGO Circular (Destacado en Blanco Puro) */
+.logo-circle {
+    width: 100px;
+    height: 100px;
+    background-color: var(--logo-highlight); /* Fondo Blanco Puro */
+    color: var(--black-dark); /* Texto Negro */
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra más oscura */
 }
 
-p {
-  font-size: 22px;
-  color: #ef476f;
-  margin: 30px auto;
-  max-width: 700px;
+/* Textos de Cabecera */
+.brand-name {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
 }
 
-/* Decoración de flores arriba y abajo */
-.decoracion {
-  position: absolute;
-  width: 80px;
-  opacity: 0.2;
-  z-index: 0;
-  pointer-events: none;
+.tagline {
+    margin: 5px 0 0;
+    font-size: 1em;
+    color: var(--gray-text); /* Texto secundario en Gris claro */
 }
 
-.flor-top-izq {
-  top: 10px;
-  left: 15px;
+.established {
+    margin-top: 5px;
+    font-size: 0.8em;
+    color: var(--gray-text); /* Texto secundario en Gris claro */
+    margin-bottom: 40px;
 }
 
-.flor-top-der {
-  top: 10px;
-  right: 15px;
+
+/* SECCIÓN DE BOTONES */
+.links-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.flor-bottom-izq {
-  bottom: 10px;
-  left: 10px;
+.link-button {
+    text-decoration: none;
+    color: var(--button-text); /* Texto negro en botón blanco */
+    background-color: var(--button-bg); /* Fondo blanco del botón */
+    padding: 18px 30px; 
+    border-radius: 50px; 
+    border: 1px solid var(--gray-mid); /* Borde sutil gris */
+    transition: background-color 0.3s, transform 0.2s, color 0.3s;
+    font-weight: 700;
+    font-size: 1.1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.flor-bottom-der {
-  bottom: 10px;
-  right: 10px;
+.link-button:hover {
+    background-color: var(--gray-mid); /* Gris oscuro al pasar el ratón */
+    color: var(--white-light); /* Texto blanco al pasar el ratón */
+    transform: translateY(-2px);
+    border-color: var(--gray-mid);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .decoracion {
-    width: 50px;
-  }
+/* ICONOS SOCIALES */
+.social-links {
+    margin-top: 50px;
+}
+
+.social-links a {
+    color: var(--white-light); /* Iconos de color Blanco */
+    font-size: 2.5em; 
+    margin: 0 15px;
+    transition: color 0.3s, transform 0.2s;
+    text-decoration: none; /* Asegura que no haya subrayado */
+    line-height: 1; /* Ajusta la altura de la línea para eliminar el espacio inferior */
+    vertical-align: middle; /* Ayuda a centrar verticalmente */
+}
+
+.social-links a:hover {
+    color: var(--gray-text); /* Cambio de color a gris al pasar el ratón */
+    transform: scale(1.1);
 }
